@@ -4,14 +4,15 @@ import { Component, Prop, h , Event, EventEmitter} from "@stencil/core";
 @Component({
   tag:'button-component',
   styleUrl: 'button.component.css',
-  scoped: true
+  shadow: true
 })
 export class Button {
-  @Prop() data: any;
+  @Prop({reflect: false}) data: any;
   @Event({ bubbles: true }) onBtnClick : EventEmitter<string>
   buttonClick(){
     this.onBtnClick.emit('true')
   }
+
 
   componentWillLoad(){
     if(typeof this.data === 'string'){
@@ -22,7 +23,9 @@ export class Button {
   render(){
     return(
       <span>
-        <button class={this.data.className} onClick={this.buttonClick.bind(this)}>{this.data.name}</button>
+        {this.data.disabled ?
+        <button type="button" disabled class={this.data.className} onClick={this.buttonClick.bind(this)}>{this.data.name}</button> :
+        <button type="button" class={this.data.className} onClick={this.buttonClick.bind(this)}>{this.data.name}</button>}
       </span>
     )
   }

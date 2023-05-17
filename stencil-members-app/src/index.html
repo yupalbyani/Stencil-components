@@ -7,8 +7,44 @@
 
     <script type="module" src="/build/stencil-members-app.esm.js"></script>
     <script nomodule src="/build/stencil-members-app.js"></script>
+    <style>
+      .card-components{
+        margin: 0 auto;
+        max-width: 60%;
+        display: flex;
+        align-items: center;
+        gap:50px;
+      }
+    </style>
   </head>
   <body>
-    <button-component data='{"name":"Test Button","className":"primary"}'></button-component>
+    <div class="card-components">
+      <div class="card-component">
+        <card-header-component heading-title="My first heading" heading-title-tag="h3" heading-type="primary"></card-header-component>
+        <div class="buttons">
+          <button-component data='{"name":"Submit","className":"primary"}'></button-component>
+          <button-component data='{"name":"Cancel","className":"danger"}'></button-component>
+          <button-component data='{"name":"Disabled","className":"","disabled":true}'></button-component>
+        </div>
+      </div>
+      <div class="card-component">
+        <card-header-component heading-title="My first heading" heading-title-tag="h3" heading-type="primary"></card-header-component>
+        <div class="buttons">
+          <button-component data='{"name":"Submit","className":"primary"}'></button-component>
+          <button-component data='{"name":"Cancel","className":"danger"}'></button-component>
+          <button-component data='{"name":"Disabled","className":"","disabled":true}'></button-component>
+        </div>
+      </div>
+      <div class="card-component">
+        <card-header-component heading-title="My first heading" heading-title-tag="h3" heading-type="primary"></card-header-component>
+        <div class="buttons">
+          <button-component data='{"name":"Submit","className":"primary"}'></button-component>
+          <button-component data='{"name":"Cancel","className":"danger"}'></button-component>
+          <button-component data='{"name":"Disabled","className":"","disabled":true}'></button-component>
+        </div>
+      </div>
+    </div>
+
+
   </body>
 </html>

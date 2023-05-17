@@ -1,9 +1,29 @@
 
 :host {
   --color-primary: blue;
+  --color-danger: red;
 }
 :host(.primary){
+
+  --color: #fff;
+  font-weight: bold
+}
+
+button.primary{
   background-color: var(--color-primary);
   color: #fff;
-  font-weight: bold
+}
+
+button.danger{
+  background-color: var(--color-danger);
+  color: #fff;
+}
+
+button{
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: arial;
+  cursor: pointer;
 }
