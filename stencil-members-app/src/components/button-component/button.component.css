@@ -1,11 +1,11 @@
 button.primary{
-  background-color: var(--color-bg-primary);
+  background-color: #00529C;
   color: #fff;
 }
-/* button.danger{
-  background-color: var(--color-danger);
+button.danger{
+  background-color: #922D2B;
   color: #fff;
-} */
+}
 button.btn-outline-primary{
   color: #09529B;
   border: 1px solid #0A529B;
@@ -19,9 +19,4 @@ button{
   font-size: 14px;
   font-family: arial;
   cursor: pointer;
-}
-
-:host button.danger {
-  background-color: var(--color-danger);
-  color: #fff;
 }
