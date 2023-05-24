@@ -20,6 +20,9 @@ export class CardDetailComponent{
                 <div class="card-details">
                     <card-header-component heading-title={this.detailsData?.header.headingTitle} heading-title-tag={this.detailsData?.header.headingTitleTag} heading-type={this.detailsData?.header.headingType}></card-header-component>
                     <div class="card-detail">
+                        <div class="card-container">
+                          <slot></slot>
+                        </div>
                         <div class="card-details-footer">
                             <div class="btn-group">
                                 {this.detailsData?.buttons.map((item)=>{

@@ -12,25 +12,91 @@
     <style>
       .card-components{
         margin: 0 auto;
-        max-width: 60%;
         display: flex;
         align-items: center;
         gap:50px;
       }
+
+      .home-page{
+        margin: 0 auto;
+        max-width: 851px;
+      }
+
+      .card-list-items-block{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .card-list{
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+      }
+
+      .card-list-content ul{
+        margin: 0px;
+        padding-left:0px;
+      }
+      .card-list-content ul li{
+       list-style-type: none;
+      }
+
+      .card-list-content ul span{
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+
     </style>
   </head>
   <body>
-    <div class="card-components">
-      <div class="card-component">
-        <card-details-component details-data='{"header": {"headingTitle":"My AAA Membership" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Add Member","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Upgrade Membership"}'></card-details-component>
-      </div>
-      <div class="card-component">
-        <card-details-component details-data='{"header": {"headingTitle":"My Home Insurance" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Edit Policy","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Contact My Agent"}'></card-details-component>
-      </div>
-      <div class="card-component">
-        <card-details-component details-data='{"header": {"headingTitle":"My Home Insurance" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Add Member","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Contact My Agent"}'></card-details-component>
+    <div class="home-page">
+      <page-header title="My AAA Account Overview"></page-header>
+      <div class="card-components">
+        <div class="card-component">
+          <card-details-component details-data='{"header": {"headingTitle":"My AAA Membership" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Add Member","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Upgrade Membership"}'>
+            <div class="card-list-items-block">
+              <div class="card-list">
+                <div class="card-list-image">
+                  <img src="" alt="logo"/>
+                </div>
+                <div class="card-list-content">
+                  <ul>
+                    <li>
+                      <span>Membership Number:</span>
+                      <span>6201617134081072</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-list">
+                <div class="card-list-image">
+                  <img src="" alt="logo"/>
+                </div>
+                <div class="card-list-content">
+                  <ul>
+                    <li>
+                      <span>Membership Number:</span>
+                      <span>6201617134081072</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </card-details-component>
+        </div>
+        <div class="card-component">
+          <card-details-component details-data='{"header": {"headingTitle":"My Home Insurance" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Edit Policy","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Contact My Agent"}'></card-details-component>
+        </div>
+        <div class="card-component">
+          <card-details-component details-data='{"header": {"headingTitle":"My Home Insurance" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Add Member","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Contact My Agent"}'></card-details-component>
+        </div>
       </div>
     </div>
+
+
     <script>
         var cardData = [
          {

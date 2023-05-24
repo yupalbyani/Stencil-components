@@ -1,0 +1,30 @@
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+}
+
+
+h1{
+  color: #23201F;
+  font-size: 32px;
+  font-family: Mission Gothic, Arial, Helvetica, sans-serif;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 span{
+  border: 2px solid #00529C;
+  width: 20px;
+}
+
+.action-item a{
+  font-size: 16px;
+  color: #00529C;
+  font-weight: bold;
+}

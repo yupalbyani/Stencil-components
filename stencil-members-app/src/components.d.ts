@@ -31,6 +31,11 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface PageHeader {
+        "buttonData": any;
+        "linkData": any;
+        "title": string;
+    }
 }
 export interface ButtonComponentCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -61,11 +66,18 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLPageHeaderElement extends Components.PageHeader, HTMLStencilElement {
+    }
+    var HTMLPageHeaderElement: {
+        prototype: HTMLPageHeaderElement;
+        new (): HTMLPageHeaderElement;
+    };
     interface HTMLElementTagNameMap {
         "button-component": HTMLButtonComponentElement;
         "card-details-component": HTMLCardDetailsComponentElement;
         "card-header-component": HTMLCardHeaderComponentElement;
         "my-component": HTMLMyComponentElement;
+        "page-header": HTMLPageHeaderElement;
     }
 }
 declare namespace LocalJSX {
@@ -95,11 +107,17 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface PageHeader {
+        "buttonData"?: any;
+        "linkData"?: any;
+        "title"?: string;
+    }
     interface IntrinsicElements {
         "button-component": ButtonComponent;
         "card-details-component": CardDetailsComponent;
         "card-header-component": CardHeaderComponent;
         "my-component": MyComponent;
+        "page-header": PageHeader;
     }
 }
 export { LocalJSX as JSX };
@@ -110,6 +128,7 @@ declare module "@stencil/core" {
             "card-details-component": LocalJSX.CardDetailsComponent & JSXBase.HTMLAttributes<HTMLCardDetailsComponentElement>;
             "card-header-component": LocalJSX.CardHeaderComponent & JSXBase.HTMLAttributes<HTMLCardHeaderComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "page-header": LocalJSX.PageHeader & JSXBase.HTMLAttributes<HTMLPageHeaderElement>;
         }
     }
 }
