@@ -1,26 +1,19 @@
-
-:host {
-  --color-primary: blue;
-  --color-danger: red;
-}
-:host(.primary){
-
-  --color: #fff;
-  font-weight: bold
-}
-
 button.primary{
-  background-color: var(--color-primary);
+  background-color: var(--color-bg-primary);
   color: #fff;
 }
-
 button.danger{
   background-color: var(--color-danger);
   color: #fff;
 }
-
+button.btn-outline-primary{
+  color: #09529B;
+  border: 1px solid #0A529B;
+  background: transparent;
+}
 button{
-  padding: 10px;
+  padding: 5px 10px;
+  height: 28px;
   border: none;
   border-radius: 4px;
   font-size: 14px;

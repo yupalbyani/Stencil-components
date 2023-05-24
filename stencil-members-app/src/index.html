@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+
 <html dir="ltr" lang="en">
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-
     <script type="module" src="/build/stencil-members-app.esm.js"></script>
     <script nomodule src="/build/stencil-members-app.js"></script>
+    <link rel="stylesheet" href="/build/stencil-members-app.css"/>
     <style>
       .card-components{
         margin: 0 auto;
@@ -20,31 +22,55 @@
   <body>
     <div class="card-components">
       <div class="card-component">
-        <card-header-component heading-title="My first heading" heading-title-tag="h3" heading-type="primary"></card-header-component>
-        <div class="buttons">
-          <button-component data='{"name":"Submit","className":"primary"}'></button-component>
-          <button-component data='{"name":"Cancel","className":"danger"}'></button-component>
-          <button-component data='{"name":"Disabled","className":"","disabled":true}'></button-component>
-        </div>
+        <card-details-component details-data='{"header": {"headingTitle":"My AAA Membership" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Add Member","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Upgrade Membership"}'></card-details-component>
       </div>
       <div class="card-component">
-        <card-header-component heading-title="My first heading" heading-title-tag="h3" heading-type="primary"></card-header-component>
-        <div class="buttons">
-          <button-component data='{"name":"Submit","className":"primary"}'></button-component>
-          <button-component data='{"name":"Cancel","className":"danger"}'></button-component>
-          <button-component data='{"name":"Disabled","className":"","disabled":true}'></button-component>
-        </div>
+        <card-details-component details-data='{"header": {"headingTitle":"My Home Insurance" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Edit Policy","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Contact My Agent"}'></card-details-component>
       </div>
       <div class="card-component">
-        <card-header-component heading-title="My first heading" heading-title-tag="h3" heading-type="primary"></card-header-component>
-        <div class="buttons">
-          <button-component data='{"name":"Submit","className":"primary"}'></button-component>
-          <button-component data='{"name":"Cancel","className":"danger"}'></button-component>
-          <button-component data='{"name":"Disabled","className":"","disabled":true}'></button-component>
-        </div>
+        <card-details-component details-data='{"header": {"headingTitle":"My Home Insurance" ,"headingTitleTag":"h5","headingType":"primary"},"buttons":[{"name":"Add Member","className":"danger"},{"name":"Edit auto pay","className":"btn-outline-primary"}],"linkTo":"Contact My Agent"}'></card-details-component>
       </div>
     </div>
+    <script>
+        var cardData = [
+         {
+          "header": {
+            "headingTitle":"My AAA Membership" ,
+            "headingTitleTag":"h5",
+            "headingType":"primary"
+          },
+          "buttons":[
+            {"name":"Add Member","className":"danger"},
+            {"name":"Edit auto pay","className":"btn-outline-primary"}
+          ],
+          "linkTo":'Upgrade Membership'
+         },
+         {
+          "header": {
+            "headingTitle":"My Auto Insurance" ,
+            "headingTitleTag":"h5",
+            "headingType":"primary"
+          },
+          "buttons":[
+            {"name":"Edit Policy","className":"danger"},
+            {"name":"Edit auto pay","className":"btn-outline-primary"}
+          ],
+          "linkTo":'Contact My Agent'
+         },
+         {
+          "header": {
+            "headingTitle":"My Home Insurance" ,
+            "headingTitleTag":"h5",
+            "headingType":"primary"
+          },
+          "buttons":[
+            {"name":"Edit Policy","className":"danger"},
+            {"name":"Pay Bill","className":"btn-outline-primary"}
+          ],
+          "linkTo":'Contact My Agent'
+         }
+      ]
 
-
+    </script>
   </body>
 </html>

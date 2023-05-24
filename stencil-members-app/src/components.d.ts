@@ -9,6 +9,9 @@ export namespace Components {
     interface ButtonComponent {
         "data": any;
     }
+    interface CardDetailsComponent {
+        "detailsData": any;
+    }
     interface CardHeaderComponent {
         "headingTitle": string | 'Add Heading';
         "headingTitleTag": string | 'h1';
@@ -40,6 +43,12 @@ declare global {
         prototype: HTMLButtonComponentElement;
         new (): HTMLButtonComponentElement;
     };
+    interface HTMLCardDetailsComponentElement extends Components.CardDetailsComponent, HTMLStencilElement {
+    }
+    var HTMLCardDetailsComponentElement: {
+        prototype: HTMLCardDetailsComponentElement;
+        new (): HTMLCardDetailsComponentElement;
+    };
     interface HTMLCardHeaderComponentElement extends Components.CardHeaderComponent, HTMLStencilElement {
     }
     var HTMLCardHeaderComponentElement: {
@@ -54,6 +63,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "button-component": HTMLButtonComponentElement;
+        "card-details-component": HTMLCardDetailsComponentElement;
         "card-header-component": HTMLCardHeaderComponentElement;
         "my-component": HTMLMyComponentElement;
     }
@@ -62,6 +72,9 @@ declare namespace LocalJSX {
     interface ButtonComponent {
         "data"?: any;
         "onOnBtnClick"?: (event: ButtonComponentCustomEvent<string>) => void;
+    }
+    interface CardDetailsComponent {
+        "detailsData"?: any;
     }
     interface CardHeaderComponent {
         "headingTitle"?: string | 'Add Heading';
@@ -84,6 +97,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "button-component": ButtonComponent;
+        "card-details-component": CardDetailsComponent;
         "card-header-component": CardHeaderComponent;
         "my-component": MyComponent;
     }
@@ -93,6 +107,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "button-component": LocalJSX.ButtonComponent & JSXBase.HTMLAttributes<HTMLButtonComponentElement>;
+            "card-details-component": LocalJSX.CardDetailsComponent & JSXBase.HTMLAttributes<HTMLCardDetailsComponentElement>;
             "card-header-component": LocalJSX.CardHeaderComponent & JSXBase.HTMLAttributes<HTMLCardHeaderComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }

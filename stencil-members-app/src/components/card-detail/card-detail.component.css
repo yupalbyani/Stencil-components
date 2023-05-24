@@ -1,0 +1,29 @@
+.card-details-footer{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-details-footer a{
+  color: #A29D97;
+  font-size:14px;
+  font-family: Helvetica;
+  text-decoration: none;
+}
+
+.card-details{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card-detail{
+  padding: 15px;
+}
+
+.btn-group{
+  display: flex;
+  gap: 20px;
+}

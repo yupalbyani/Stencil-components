@@ -1,17 +1,14 @@
-
-:host {
-  --color-primary: blue;
-  --color-danger: red;
-}
-
 div.heading{
   text-align: center;
   padding: 5px;
   background-color: #000;
-  width: 100%;
+  width: 96.5%;
   float: left;
   color: #fff;
   text-align: center;
+  font-family: Helvetica;
+  font-size: 16px;
+  border-radius: 4px 4px 0px 0px;
 }
 
 div.primary h1,
@@ -21,8 +18,8 @@ div.primary h4,
 div.primary h5,
 div.primary h6{
   color: #fff;
+  margin: 0px;
 }
-
 div.primary{
-  background-color: var(--color-primary);
+  background-color: var(--color-bg-primary);
 }

@@ -81,10 +81,6 @@ export class CardHeader {
 
     }
 
-    return (
-      <div class={classNaming}>
-        <h3 class="primary">{this.headingTitle}</h3>
-      </div>
-    );
+    return tag;
   }
 }
